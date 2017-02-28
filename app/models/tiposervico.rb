@@ -1,0 +1,2 @@
+class Tiposervico < ApplicationRecord
+end

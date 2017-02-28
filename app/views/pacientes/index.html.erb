@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pacientes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Pessoa</th>
+      <th>Numerocartaosus</th>
+      <th>Profissao</th>
+      <th>Enderecoprofissional</th>
+      <th>Enderecoresidencial</th>
+      <th>Nomeconjugue</th>
+      <th>Contatoconjugue</th>
+      <th>String</th>
+      <th>Profissaoconjugue</th>
+      <th>Possuifilhos</th>
+      <th>Filhosquantidade</th>
+      <th>Idadefilhos</th>
+      <th>Observacao</th>
+      <th>Localnascimento</th>
+      <th>Datacadastro</th>
+      <th>Dataobito</th>
+      <th>Ativo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pacientes.each do |paciente| %>
+      <tr>
+        <td><%= paciente.pessoa %></td>
+        <td><%= paciente.numerocartaosus %></td>
+        <td><%= paciente.profissao %></td>
+        <td><%= paciente.enderecoprofissional %></td>
+        <td><%= paciente.enderecoresidencial %></td>
+        <td><%= paciente.nomeconjugue %></td>
+        <td><%= paciente.contatoconjugue %></td>
+        <td><%= paciente.string %></td>
+        <td><%= paciente.profissaoconjugue %></td>
+        <td><%= paciente.possuifilhos %></td>
+        <td><%= paciente.filhosquantidade %></td>
+        <td><%= paciente.idadefilhos %></td>
+        <td><%= paciente.observacao %></td>
+        <td><%= paciente.localnascimento %></td>
+        <td><%= paciente.datacadastro %></td>
+        <td><%= paciente.dataobito %></td>
+        <td><%= paciente.ativo %></td>
+        <td><%= link_to 'Show', paciente %></td>
+        <td><%= link_to 'Edit', edit_paciente_path(paciente) %></td>
+        <td><%= link_to 'Destroy', paciente, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Paciente', new_paciente_path %>

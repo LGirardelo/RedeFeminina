@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @pessoa.nome %>
+</p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @pessoa.cpf %>
+</p>
+
+<p>
+  <strong>Rg:</strong>
+  <%= @pessoa.rg %>
+</p>
+
+<p>
+  <strong>Telefoneresidencial:</strong>
+  <%= @pessoa.telefoneresidencial %>
+</p>
+
+<p>
+  <strong>Telefonecelular:</strong>
+  <%= @pessoa.telefonecelular %>
+</p>
+
+<p>
+  <strong>Datanascimento:</strong>
+  <%= @pessoa.datanascimento %>
+</p>
+
+<p>
+  <strong>Sexo:</strong>
+  <%= @pessoa.sexo %>
+</p>
+
+<%= link_to 'Edit', edit_pessoa_path(@pessoa) %> |
+<%= link_to 'Back', pessoas_path %>

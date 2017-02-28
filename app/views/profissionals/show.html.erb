@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Especializacao:</strong>
+  <%= @profissional.especializacao %>
+</p>
+
+<p>
+  <strong>Pessoa:</strong>
+  <%= @profissional.pessoa %>
+</p>
+
+<%= link_to 'Edit', edit_profissional_path(@profissional) %> |
+<%= link_to 'Back', profissionals_path %>

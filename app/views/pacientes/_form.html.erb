@@ -1,0 +1,102 @@
+<%= form_for(paciente) do |f| %>
+  <% if paciente.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(paciente.errors.count, "error") %> prohibited this paciente from being saved:</h2>
+
+      <ul>
+      <% paciente.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :pessoa_id %>
+    <%= f.text_field :pessoa_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :numerocartaosus %>
+    <%= f.text_field :numerocartaosus %>
+  </div>
+
+  <div class="field">
+    <%= f.label :profissao %>
+    <%= f.text_field :profissao %>
+  </div>
+
+  <div class="field">
+    <%= f.label :enderecoprofissional %>
+    <%= f.text_field :enderecoprofissional %>
+  </div>
+
+  <div class="field">
+    <%= f.label :enderecoresidencial %>
+    <%= f.text_field :enderecoresidencial %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nomeconjugue %>
+    <%= f.text_field :nomeconjugue %>
+  </div>
+
+  <div class="field">
+    <%= f.label :contatoconjugue %>
+    <%= f.text_field :contatoconjugue %>
+  </div>
+
+  <div class="field">
+    <%= f.label :string %>
+    <%= f.text_field :string %>
+  </div>
+
+  <div class="field">
+    <%= f.label :profissaoconjugue %>
+    <%= f.text_field :profissaoconjugue %>
+  </div>
+
+  <div class="field">
+    <%= f.label :possuifilhos %>
+    <%= f.check_box :possuifilhos %>
+  </div>
+
+  <div class="field">
+    <%= f.label :filhosquantidade %>
+    <%= f.number_field :filhosquantidade %>
+  </div>
+
+  <div class="field">
+    <%= f.label :idadefilhos %>
+    <%= f.text_field :idadefilhos %>
+  </div>
+
+  <div class="field">
+    <%= f.label :observacao %>
+    <%= f.text_field :observacao %>
+  </div>
+
+  <div class="field">
+    <%= f.label :localnascimento %>
+    <%= f.text_field :localnascimento %>
+  </div>
+
+  <div class="field">
+    <%= f.label :datacadastro %>
+    <%= f.datetime_select :datacadastro %>
+  </div>
+
+  <div class="field">
+    <%= f.label :dataobito %>
+    <%= f.date_select :dataobito %>
+  </div>
+
+  <div class="field">
+    <%= f.label :ativo %>
+    <%= f.check_box :ativo %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

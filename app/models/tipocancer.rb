@@ -1,0 +1,2 @@
+class Tipocancer < ApplicationRecord
+end
